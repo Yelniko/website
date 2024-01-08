@@ -21,7 +21,6 @@ header{
     align-items: center;
     padding: 0 8%;
     box-shadow: 0 5px 10px #3b3c3c;
-    border-radius: 0px 0px 150px 150px;
 }
 
 header .logo{
@@ -54,9 +53,11 @@ nav ul li ul{
     position: absolute;
     color: #fff;
     width: 135px;
-    background: #000;
+    background: #333232;
     display: none;
-    border-radius: 0 0 30px 30px;
+    border-radius: 10px 10px 10px 10px;
+    border-width: 3;
+    border-color: #fff;
 }
 
 nav ul li ul li{
