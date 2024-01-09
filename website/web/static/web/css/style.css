@@ -20,7 +20,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 8%;
-    box-shadow: 0 5px 10px #3b3c3c;
+    box-shadow: 0 5px 10px #BF7130;
 }
 
 header .logo{
@@ -30,7 +30,7 @@ header .logo{
 }
 
 header .logo:hover{
-    color: aqua;
+    color: #00D1D1;
 }
 
 header nav ul li{
@@ -46,18 +46,19 @@ header .clause{
 }
 
 header .clause:hover{
-    color: aqua;
+    color: #00D1D1;
 }
 
 nav ul li ul{
     position: absolute;
-    color: #fff;
+    color: #00D1D1;
     width: 135px;
-    background: #333232;
+    background: #000;
     display: none;
     border-radius: 10px 10px 10px 10px;
     border-width: 3;
     border-color: #fff;
+    border: 2px solid #BF7130;
 }
 
 nav ul li ul li{
@@ -67,18 +68,41 @@ nav ul li ul li{
 }
 
 nav ul li ul li:hover{
-    color: aqua;
+    color: #FF7400;
 }
 
 nav ul li:hover > ul {
     display: initial;
 }
 
-header p input{
-    border-color: #fff;
+.button {
+    border-radius: 8px;
+    font-size: 13px;
+    color:#fff;
+    padding: 5px 14px;
     background-color: #000;
-    border-radius: 5px;
-    text-emphasis-color: #fff;
+    border: 2px solid #fff;
 }
+
+.button_1 {
+    border-radius: 8px;
+    font-size: 13px;
+    padding: 5px 14px;
+    background-color: #00CED1;
+    border: 2px solid #00CED1;
+}
+
+.button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.button_1:hover{
+    background-color: #FF7400;
+    border: 2px solid #FF7400;
+}
+
+
+
 
 
