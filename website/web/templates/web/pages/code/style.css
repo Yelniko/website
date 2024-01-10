@@ -55,7 +55,7 @@ nav ul li ul{
     width: 135px;
     background: #000;
     display: none;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px ;
     border-width: 3;
     border-color: #fff;
     border: 2px solid #BF7130;
@@ -103,24 +103,29 @@ nav ul li:hover > ul {
 }
 
 .content{
-    width: 600px;
-    min-height: 0px;
+    max-width: 600px;
+    min-height: auto;
     display: block;
     margin: 0px 0px 20px 0px;
-    background: #BF7130;
+    background: #FF7400;
     position: relative;
     left: 50%;
     top: 150px;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
         
 }
 
 .content h1{
     word-wrap: break-word;
     text-align: center;
+    border-bottom: 2px solid #000;
+
 }
 
 .content p{
     word-wrap: break-word;
+    padding: 10px;
 }
 
 
