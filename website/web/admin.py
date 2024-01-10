@@ -3,4 +3,4 @@ from .models import *
 
 admin.site.register(User)
 admin.site.register(Task)
-admin.site.regisret(New)
+admin.site.register(New)

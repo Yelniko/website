@@ -20,6 +20,7 @@ body{
     align-items: center;
     padding: 0 8%;
     box-shadow: 0 5px 10px #BF7130;
+    margin: 0px 0px, 10px 0px;
 }
 
 .logo{
@@ -101,7 +102,26 @@ nav ul li:hover > ul {
     border: 2px solid #FF7400;
 }
 
+.content{
+    width: 600px;
+    min-height: 0px;
+    display: block;
+    margin: 0px 0px 20px 0px;
+    background: #BF7130;
+    position: relative;
+    left: 50%;
+    top: 150px;
+        
+}
 
+.content h1{
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.content p{
+    word-wrap: break-word;
+}
 
 
 
