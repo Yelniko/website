@@ -103,17 +103,18 @@ nav ul li:hover > ul {
 }
 
 .content{
-    max-width: 600px;
-    min-height: auto;
-    display: block;
-    margin: 0px 0px 20px 0px;
-    background: #FF7400;
-    position: relative;
-    left: 50%;
-    top: 150px;
-    transform: translate(-50%,-50%);
+    width: 600px;
+    margin: auto ;
+    margin-bottom: 30px;
+    border: 2px solid #FF7400;
+    background-color: #FF7400;
     border-radius: 10px;
         
+}
+
+.content:hover{
+    background-color: #00D1D1;
+    border-color: #00D1D1;
 }
 
 .content h1{
