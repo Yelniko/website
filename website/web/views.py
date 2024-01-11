@@ -3,7 +3,8 @@ from .models import *
 
 
 def test(request):
-    return render(request, 'web/pages/code/fist.html')
+    new = New.objects.all()
+    return render(request, 'web/pages/code/home.html')
 
 
 def teg(request):

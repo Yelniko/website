@@ -20,6 +20,7 @@ body{
     align-items: center;
     padding: 0 8%;
     box-shadow: 0 5px 10px #BF7130;
+    margin: 0px 0px, 10px 0px;
 }
 
 .logo{
@@ -51,19 +52,22 @@ nav ul li{
 nav ul li ul{
     position: absolute;
     color: #00D1D1;
-    width: 135px;
+    width: auto;
     background: #000;
     display: none;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px ;
     border-width: 3;
     border-color: #fff;
-    border: 2px solid #BF7130;
+    border: 2px solid #00D1D1;
+
 }
 
 nav ul li ul li{
     width: 100%;
     display: block;
     text-align: center;
+    margin: 2px;
+    padding: 5px;
 }
 
 nav ul li ul li:hover{
@@ -87,8 +91,8 @@ nav ul li:hover > ul {
     border-radius: 8px;
     font-size: 13px;
     padding: 5px 14px;
-    background-color: #00CED1;
-    border: 2px solid #00CED1;
+    background-color: #FF7400;
+    border: 2px solid #FF7400;
 }
 
 .button:hover{
@@ -97,11 +101,36 @@ nav ul li:hover > ul {
 }
 
 .button_1:hover{
-    background-color: #FF7400;
-    border: 2px solid #FF7400;
+    background-color: #00CED1;
+    border: 2px solid #00CED1;
 }
 
+.content{
+    width: 600px;
+    margin: auto ;
+    margin-bottom: 30px;
+    border: 2px solid #FF7400;
+    background-color: #FF7400;
+    border-radius: 10px;
 
+}
+
+.content:hover{
+    background-color: #00D1D1;
+    border-color: #00D1D1;
+}
+
+.content h1{
+    word-wrap: break-word;
+    text-align: center;
+    border-bottom: 2px solid #000;
+
+}
+
+.content p{
+    word-wrap: break-word;
+    padding: 10px;
+}
 
 
 
