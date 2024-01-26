@@ -7,6 +7,9 @@ class Task(models.Model):
     task_time = models.DateTimeField(auto_now_add=True)
     task_test = models.TextField(name='test')
 
+    def __str__(self):
+        return self.task_name
+
 
 class New(models.Model):
     new_name = models.TextField(name='name')
@@ -16,3 +19,9 @@ class New(models.Model):
 
     def __str__(self):
         return self.new_name
+
+
+
+
+
+

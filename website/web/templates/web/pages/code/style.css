@@ -132,6 +132,23 @@ nav ul li:hover > ul {
     padding: 10px;
 }
 
+.login{
+    background-color: #535050;
+}
+
+.log-sin{
+    width: 400px;
+    height: 400px;
+    margin: 50% auto;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+
+
+
+
+
 
 
 
