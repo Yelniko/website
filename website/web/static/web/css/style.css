@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 body{
-    background: #fff;
+    background: #ecf0f3;
 }
 .tet{
     position: fixed;
@@ -79,20 +79,25 @@ nav ul li:hover > ul {
 }
 
 .button {
+    display: inline-block;
     border-radius: 8px;
     font-size: 13px;
     color:#fff;
     padding: 5px 14px;
     background-color: #000;
     border: 2px solid #fff;
+    text-decoration: none
 }
 
 .button_1 {
+    display: inline-block;
     border-radius: 8px;
     font-size: 13px;
+    color: #000
     padding: 5px 14px;
     background-color: #FF7400;
     border: 2px solid #FF7400;
+    text-decoration: none
 }
 
 .button:hover{
@@ -136,6 +141,7 @@ nav ul li:hover > ul {
     word-wrap: break-word;
     padding: 10px;
 }
+
 
 
 
