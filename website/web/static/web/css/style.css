@@ -89,11 +89,11 @@ nav ul li:hover > ul {
     text-decoration: none
 }
 
-.button_1 {
+.button1 {
     display: inline-block;
     border-radius: 8px;
     font-size: 13px;
-    color: #000
+    color: #000;
     padding: 5px 14px;
     background-color: #FF7400;
     border: 2px solid #FF7400;
@@ -105,7 +105,7 @@ nav ul li:hover > ul {
     color: #000;
 }
 
-.button_1:hover{
+.button1:hover{
     background-color: #00CED1;
     border: 2px solid #00CED1;
 }
@@ -140,6 +140,30 @@ nav ul li:hover > ul {
 .content p{
     word-wrap: break-word;
     padding: 10px;
+}
+
+.exit {
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #000;
+    padding: 5px 14px;
+    background-color: #FF7400;
+    border: 2px solid #FF7400;
+    text-decoration: none
+}
+
+.exit::before {
+    content: attr(text);
+}
+
+.exit:hover::before {
+    content: "EXIT";
+}
+
+.exit:hover{
+    background-color: #00CED1;
+    border: 2px solid #00CED1;
 }
 
 
