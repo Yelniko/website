@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Task(models.Model):
@@ -6,6 +7,7 @@ class Task(models.Model):
     task_description = models.TextField(name='description')
     task_time = models.DateTimeField(auto_now_add=True)
     task_test = models.TextField(name='test')
+    task_complexity = models.TextField(name='complexity')
 
     def __str__(self):
         return self.task_name
@@ -21,7 +23,9 @@ class New(models.Model):
         return self.new_name
 
 
-
+class Post(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
 
 
 

@@ -7,6 +7,7 @@ urlpatterns = [
     path('teg/', views.teg, name='task'),
     path('accounts/profile/', views.profile_view, name='login'),
     path('accounts/logout/', views.logout_view, name='logout'),
+    path('registration', views.RegisterView.as_view(), name='sing-up')
 
 ]
 

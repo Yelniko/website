@@ -4,8 +4,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="content top">
-        <h1>Hello</h1>
-        <p>Hello my website</p>
-    </div>
+    {% if user.is_authenticated %}
+        <div class="content top">
+            <h1>Hello {{ user.username }}</h1>
+            <a  href="{% url 'password_change' %}" >You want to change your password ?</a>
+        </div>
+    {% else %}
+        <div class="content top">
+            <h1>Hello</h1>
+            <p>Hello my website</p>
+        </div>
+    {% endif %}
 {% endblock %}

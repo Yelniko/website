@@ -142,6 +142,11 @@ nav ul li:hover > ul {
     padding: 10px;
 }
 
+.content a{
+    word-wrap: break-word;
+    padding: 10px;
+}
+
 .exit {
     display: inline-block;
     border-radius: 8px;

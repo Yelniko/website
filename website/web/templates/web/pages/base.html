@@ -26,7 +26,8 @@
 
      <nav >
          <ul >
-             <li><p class="clause">Tasks</p>
+             <li>
+                <p class="clause">Tasks</p>
                 <ul>
                      <li><a href="#" ></a>Easy</li>
                      <li><a href="#" ></a>Medium</li>
@@ -35,6 +36,9 @@
              </li>
              {% if request.user.is_authenticated %}
                 <li><a href="#" class="clause">Forum</a></li>
+             {% endif %}
+             {% if user.is_superuser %}
+                <li><a href="#" class="clause">Add task</a></li>
              {% endif %}
              <li><a href="#" class="clause">About us</a></li>
          </ul>
@@ -45,7 +49,7 @@
             <p>
 
                 <a href="{% url 'login' %}" class="button">login</a>
-                <a href="#"  class="button1">Sign-up</a>
+                <a href="{% url 'sing-up' %}"  class="button1">Sign-up</a>
             </p>
         {% endif %}
     </div>

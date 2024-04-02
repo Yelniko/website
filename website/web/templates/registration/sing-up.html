@@ -13,12 +13,6 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="logo">
-            <img src="https://www.freepnglogos.com/uploads/openclipart/open-book-colouring-pages-download-clip-art-9.jpg" alt="">
-        </div>
-        <div class="text-center mt-4 name">
-            Book
-        </div>
         <form class="p-3 mt-3" method="post">
             {% csrf_token %}
             <div class="form-field d-flex align-items-center">
@@ -26,15 +20,24 @@
                 <input type="text" name="username" id="userName" placeholder="Username">
             </div>
             <div class="form-field d-flex align-items-center">
-                <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Password">
+                <span class="fas fa-envelope"></span>
+                <input type="email" name="email" id="mail" placeholder="Email">
             </div>
-            <button class="btn mt-3">Login</button>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password1" id="pwd" placeholder="Password">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password2" id="pwd2" placeholder="Password">
+            </div>
+            <button class="btn mt-3">Sign-up</button>
+            <div class="text-center fs-6">
+                <a href="{% url 'login' %}">Login ?</a>
+            </div>
             {{ form.errors }}
         </form>
-        <div class="text-center fs-6">
-            <a href="{% url 'password_reset' %}">Forget password?</a> or <a href="{% url 'sing-up' %}">Sign-up?</a>
-        </div>
+
     </div>
 </body>
 </html>
