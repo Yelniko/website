@@ -10,8 +10,17 @@ def home(request):
     return render(request, 'web/pages/code/home.html')
 
 
-def teg(request):
-    return render(request, 'registration/sing-up.html')
+def create(request):
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    form = TaskForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'web/pages/code/create.html', context)
 
 
 @login_required()
@@ -40,3 +49,5 @@ class RegisterView(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
+

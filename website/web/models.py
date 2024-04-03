@@ -7,10 +7,11 @@ class Task(models.Model):
     task_description = models.TextField(name='description')
     task_time = models.DateTimeField(auto_now_add=True)
     task_test = models.TextField(name='test')
-    task_complexity = models.TextField(name='complexity')
+    task_complexity = models.CharField(name='complexity', max_length=6, choices=(('easy', 'easy'),
+                                                                                 ('medium', 'medium'),
+                                                                                 ('hard', 'hard')))
 
-    def __str__(self):
-        return self.task_name
+
 
 
 class New(models.Model):
