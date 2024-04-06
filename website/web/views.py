@@ -51,3 +51,25 @@ class RegisterView(FormView):
         return super().form_valid(form)
 
 
+def task_easy(request):
+    tasks = Task.objects.filter(complexity='easy')
+    content = {
+        'task': tasks
+    }
+    return render(request, 'web/pages/code/task.html', content)
+
+
+def task_medium(request):
+    tasks = Task.objects.get(complexity='medium')
+    content = {
+        'task': tasks
+    }
+    return render(request, 'web/pages/code/task.html', content)
+
+
+def task_hard(request):
+    tasks = Task.objects.get(complexity='hard')
+    content = {
+        'task': tasks
+    }
+    return render(request, 'web/pages/code/task.html', content)

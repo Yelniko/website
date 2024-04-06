@@ -33,7 +33,7 @@ body{
     color: #00D1D1;
 }
 
-nav ul li{
+.text {
     position: relative;
     float: left;
 }
@@ -49,7 +49,7 @@ nav ul li{
     color: #00D1D1;
 }
 
-nav ul li ul{
+.lis {
     position: absolute;
     color: #00D1D1;
     width: auto;
@@ -62,7 +62,7 @@ nav ul li ul{
 
 }
 
-nav ul li ul li{
+.lis-text {
     width: 100%;
     display: block;
     text-align: center;
@@ -70,11 +70,11 @@ nav ul li ul li{
     padding: 5px;
 }
 
-nav ul li ul li:hover{
+.lis-text:hover{
     color: #FF7400;
 }
 
-nav ul li:hover > ul {
+.text:hover > ul {
     display: initial;
 }
 
@@ -193,7 +193,13 @@ nav ul li:hover > ul {
     border: 1px solid #000;
 }
 
+.color_text {
+    color: #FF7400;
+}
 
+.color_text:hover {
+    color: #00CED1;
+}
 
 .p {
     margin-left: 330px;
@@ -203,3 +209,5 @@ nav ul li:hover > ul {
 .l {
     margin-top: 20px;
 }
+
+

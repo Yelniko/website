@@ -1,0 +1,14 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    {% for el in task %}
+        <div class="content top">
+            <h1>{{ el.name }}</h1>
+            <p>{{ el.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

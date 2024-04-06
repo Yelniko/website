@@ -12,8 +12,6 @@ class Task(models.Model):
                                                                                  ('hard', 'hard')))
 
 
-
-
 class New(models.Model):
     new_name = models.TextField(name='name')
     new_text = models.TextField(name='text')
@@ -27,6 +25,3 @@ class New(models.Model):
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
-
-
-
