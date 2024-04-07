@@ -138,11 +138,15 @@ body{
     border-color: #00D1D1;
 }
 
-.content h1{
+.content_h1{
     word-wrap: break-word;
     text-align: center;
     border-bottom: 2px solid #000;
+}
 
+.task {
+    border-bottom: none;
+    margin-bottom: 10px;
 }
 
 .content p{

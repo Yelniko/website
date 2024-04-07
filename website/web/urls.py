@@ -7,7 +7,6 @@ urlpatterns = [
     path('accounts/logout/', views.logout_view, name='logout'),
     path('registration', views.RegisterView.as_view(), name='sing-up'),
     path('create', views.create, name='create'),
-    path('task-easy', views.task_easy, name='task-easy'),
-    path('task-medium', views.task_medium, name='task-medium'),
-    path('task-hard', views.task_hard, name='task-hard')
+    path('<str:complexity>', views.task, name='task'),
+    path('task/<int:question_id>/', views.task_description, name='description')
 ]

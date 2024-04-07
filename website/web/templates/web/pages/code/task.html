@@ -5,10 +5,15 @@
 {% endblock %}
 
 {% block content %}
-    {% for el in task %}
-        <div class="content top">
-            <h1>{{ el.name }}</h1>
-            <p>{{ el.description }}</p>
+    {% if task %}
+        {% for el in task %}
+            <div class="content task">
+                <a class="content_h1 task" href="/task/{{ el.id }}">{{ el.name }}</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="content task">
+            <a class="content_h1 task">There are no tasks at the moment</a>
         </div>
-    {% endfor %}
+    {% endif %}
 {% endblock %}

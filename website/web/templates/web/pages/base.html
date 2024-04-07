@@ -29,9 +29,9 @@
              <li class="text">
                 <p class="clause">Tasks</p>
                 <ul class="lis">
-                    <li class="lis-text"><a href="{% url 'task-easy' %}" class="color_text" name="easy">Easy</a></li>
-                    <li class="lis-text"><a href="{% url 'task-medium' %}" class="color_text" name="medium">Medium</a></li>
-                    <li class="lis-text"><a href="{% url 'task-hard' %}" class="color_text" name="hard">Hard</a>
+                    <li class="lis-text"><a href="/easy" class="color_text" name="easy">Easy</a></li>
+                    <li class="lis-text"><a href="/medium" class="color_text" name="medium">Medium</a></li>
+                    <li class="lis-text"><a href="/hard" class="color_text" name="hard">Hard</a>
                  </ul>
              </li>
              {% if request.user.is_authenticated %}

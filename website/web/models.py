@@ -11,7 +11,6 @@ class Task(models.Model):
                                                                                  ('medium', 'medium'),
                                                                                  ('hard', 'hard')))
 
-
 class New(models.Model):
     new_name = models.TextField(name='name')
     new_text = models.TextField(name='text')
