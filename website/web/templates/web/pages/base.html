@@ -35,12 +35,12 @@
                  </ul>
              </li>
              {% if request.user.is_authenticated %}
-                <li class="text"><a href="#" class="clause">Forum</a></li>
+                <li class="text"><a href="{% url 'subject_forum' %}" class="clause">Forum</a></li>
              {% endif %}
              {% if user.is_superuser %}
                 <li class="text"><a href="{% url 'create' %}" class="clause">Add task</a></li>
              {% endif %}
-             <li class="text"><a href="#" class="clause">About us</a></li>
+             <li class="text"><a href="{% url 'about' %}" class="clause">About us</a></li>
          </ul>
      </nav>
         {% if request.user.is_authenticated %}

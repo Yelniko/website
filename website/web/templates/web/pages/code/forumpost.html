@@ -1,0 +1,19 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    Forum
+{% endblock %}
+
+{% block content %}
+    {% if post %}
+        {% for el in post %}
+            <div class="content task">
+                <p >{{ el.post }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="content task">
+            <a class="content_h1 task">There are no post at the moment</a>
+        </div>
+    {% endif %}
+{% endblock %}

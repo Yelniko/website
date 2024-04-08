@@ -217,4 +217,19 @@ body{
     margin-top: 20px;
 }
 
+.add {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    background-color: #FF7400;
+    border-radius: 180px;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.add a {
+    vertical-align: 5px;
+}
 

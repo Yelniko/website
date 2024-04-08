@@ -65,3 +65,23 @@ def task_description(request, question_id):
         'task': tasks
     }
     return render(request, 'web/pages/code/task_description.html', content)
+
+
+def subject_forum(request):
+    subject = SubjectForum.objects.all()
+    content = {
+        'subject': subject
+    }
+    return render(request, 'web/pages/code/subjectforum.html', content)
+
+
+def subject_post(request, subject):
+    posts = Forum.objects.filter(subject=subject)
+    content = {
+        'post': posts
+    }
+    return render(request, 'web/pages/code/forumpost.html', content)
+
+
+def about_us(request):
+    return request(request, 'web/pages/code/about.html')

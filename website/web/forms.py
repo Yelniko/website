@@ -11,7 +11,7 @@ class RegisterForm(UserCreationForm):
 class TaskForm(ModelForm):
     class Meta:
         model = Task
-        fields = ['name', 'description', 'test', 'complexity']
+        fields = ['name', 'description', 'input', 'output', 'complexity']
         widgets = {
             'name': TextInput(attrs={
                 'class': 'input l',
@@ -21,9 +21,13 @@ class TaskForm(ModelForm):
                 'class': 'input input1',
                 'placeholder': 'Enter description',
             }),
-            'test': Textarea(attrs={
+            'input': Textarea(attrs={
                 'class': 'input input1',
-                'placeholder': 'Enter test',
+                'placeholder': 'Enter input',
+            }),
+            'output': Textarea(attrs={
+                'class': 'input input1',
+                'placeholder': 'Enter output',
             }),
             'complexity': Select(),
         }

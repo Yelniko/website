@@ -1,0 +1,22 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    Forum
+{% endblock %}
+
+{% block content %}
+    {% if subject %}
+        {% for el in subject %}
+            <div class="content task">
+                <a class="content_h1 task" href="/forum/{{ el.subject }}">{{ el.subject }}</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="content task">
+            <a class="content_h1 task">There are no subject at the moment</a>
+        </div>
+    {% endif %}
+    <div class="add">
+        <a href="#">+</a>
+    </div>
+{% endblock %}
