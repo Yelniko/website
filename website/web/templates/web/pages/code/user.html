@@ -1,0 +1,12 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    User
+{% endblock %}
+
+{% block content %}
+    <div class="content top">
+        <h1 class="content_h1">Hello {{ user.username }}</h1>
+        <a  href="{% url 'password_change' %}" >You want to change your password ?</a>
+    </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm
-from .models import Task
+from .models import *
 from django.forms import ModelForm, TextInput, Textarea, Select
 
 
@@ -30,4 +30,32 @@ class TaskForm(ModelForm):
                 'placeholder': 'Enter output',
             }),
             'complexity': Select(),
+        }
+
+
+class ForumForm(ModelForm):
+    class Meta:
+        model = SubjectForum
+        fields = ['subject']
+        widgets = {
+            'subject': TextInput(attrs={
+                'class': 'input l',
+                'placeholder': 'Enter subject'
+            })
+        }
+
+
+class NewForm(ModelForm):
+    class Meta:
+        model = New
+        fields = ['name', 'text']
+        widgets = {
+            'name': TextInput(attrs={
+                'class': 'input l',
+                'placeholder': 'Enter name news'
+            }),
+            'text': Textarea(attrs={
+                'class': 'input input1',
+                'placeholder': 'Enter text',
+            }),
         }

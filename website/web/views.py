@@ -7,7 +7,24 @@ from .models import *
 
 
 def home(request):
-    return render(request, 'web/pages/code/home.html')
+    news = New.objects.order_by('-id')
+    content = {
+        'new': news
+    }
+    return render(request, 'web/pages/code/home.html', content)
+
+
+def new(request, new_id):
+    news = New.objects.get(id=new_id)
+    content = {
+        'new': news
+    }
+    return render(request, 'web/pages/code/new_all.html', content)
+
+
+@login_required()
+def cabinet(request):
+    return render(request, 'web/pages/code/user.html')
 
 
 def create(request):
@@ -49,6 +66,32 @@ class RegisterView(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
+
+def create_forum(request):
+    if request.method == 'POST':
+        form = ForumForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    form = ForumForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'web/pages/code/create.html', context)
+
+
+def create_news(request):
+    if request.method == 'POST':
+        form = NewForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    form = NewForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'web/pages/code/create.html', context)
 
 
 def task(request, complexity):

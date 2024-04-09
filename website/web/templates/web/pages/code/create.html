@@ -6,15 +6,19 @@
 
 {% block content %}
     <form class="create top" method="post">
-        <h1> Create task </h1>
+        <h1> Create </h1>
 
         {% csrf_token %}
         {{ form.name }}
+        {{ form.subject }}
+        {{ form.text }}
         {{ form.description }}
         {{ form.input }}
         {{ form.output }}
 
-        <link> Enter complexity
+        {% if form.input %}
+            <link> Enter complexity
+        {% endif %}
 
         {{ form.complexity }}
 

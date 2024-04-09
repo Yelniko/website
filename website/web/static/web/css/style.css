@@ -131,6 +131,7 @@ body{
     border: 2px solid #FF7400;
     background-color: #FF7400;
     border-radius: 10px;
+    display: block;
 }
 
 .content:hover{
@@ -232,4 +233,18 @@ body{
 .add a {
     vertical-align: 5px;
 }
+
+.news {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+.news a {
+    color: #000;
+}
+
+
 
