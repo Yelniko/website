@@ -123,12 +123,12 @@ def subject_post(request, subject):
         form = PostForum(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
-            # instance.user = request.user
+            instance.user = request.user
             instance.subject = subject
             instance.save()
 
     forum = PostForum()
-    # forum.user = request.user
+    forum.user = request.user
     forum.subject = subject
     posts = Forum.objects.filter(subject=subject)
     posts = posts.order_by('-id')
@@ -140,4 +140,4 @@ def subject_post(request, subject):
 
 
 def about_us(request):
-    return request(request, 'web/pages/code/about.html')
+    return render(request, 'web/pages/code/about.html')

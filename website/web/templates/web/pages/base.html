@@ -34,14 +34,11 @@
                     <li class="lis-text"><a href="/hard" class="color_text" name="hard">Hard</a>
                  </ul>
              </li>
-
+             {% if request.user.is_authenticated %}
                 <li class="text"><a href="{% url 'subject_forum' %}" class="clause">Forum</a></li>
-
+             {% endif %}
              {% if user.is_superuser %}
                 <li class="text"><a href="{% url 'create' %}" class="clause">Add task</a></li>
-             {% endif %}
-             {% if request.user.is_authenticated %}
-                <li class="text"><a href="{% url 'subject_forum' %}" class="clause">Cabinet</a></li>
              {% endif %}
              <li class="text"><a href="{% url 'about' %}" class="clause">About us</a></li>
          </ul>

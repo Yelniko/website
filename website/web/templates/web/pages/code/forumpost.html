@@ -13,7 +13,9 @@
     {% if post %}
         {% for el in post %}
             <div class="content task">
-                <p >{{ el.post }}</p>
+                <p>{{ el.user }}</p>
+                <p>{{ el.post }}</p>
+                <p>{{ el.time }}</p>
             </div>
         {% endfor %}
     {% else %}
