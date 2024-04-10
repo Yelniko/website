@@ -230,6 +230,20 @@ body{
 
 }
 
+.enter {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    width: 600px;
+    background-color: #FF7400;
+    border-radius: 10px;
+    left: 26.5%;
+}
+
+.enter_add {
+    field-sizing: content;
+}
+
 .add a {
     vertical-align: 5px;
 }

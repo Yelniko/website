@@ -5,7 +5,7 @@ from django.forms import ModelForm, TextInput, Textarea, Select
 
 class RegisterForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
-        fields = UserCreationForm.Meta.fields + ('email', )
+        fields = UserCreationForm.Meta.fields + ('email',)
 
 
 class TaskForm(ModelForm):
@@ -58,4 +58,16 @@ class NewForm(ModelForm):
                 'class': 'input input1',
                 'placeholder': 'Enter text',
             }),
+        }
+
+
+class PostForum(ModelForm):
+    class Meta:
+        model = Forum
+        fields = ['post', 'subject', 'user']
+        widgets = {
+            'post': TextInput(attrs={
+                'class': 'input l enter_add',
+                'placeholder': 'Enter post'
+            })
         }

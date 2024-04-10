@@ -119,9 +119,22 @@ def subject_forum(request):
 
 
 def subject_post(request, subject):
+    if request.method == 'POST':
+        form = PostForum(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            # instance.user = request.user
+            instance.subject = subject
+            instance.save()
+
+    forum = PostForum()
+    # forum.user = request.user
+    forum.subject = subject
     posts = Forum.objects.filter(subject=subject)
+    posts = posts.order_by('-id')
     content = {
-        'post': posts
+        'post': posts,
+        'forum': forum
     }
     return render(request, 'web/pages/code/forumpost.html', content)
 

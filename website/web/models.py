@@ -31,7 +31,7 @@ class SubjectForum(models.Model):
 
 
 class Forum(models.Model):
-    forum_subject = models.TextField(name='subject')
+    forum_subject = models.TextField(name='subject', blank=True)
     forum_post = models.TextField(name='post')
-    forum_user = models.TextField(name='user')
+    forum_user = models.TextField(name='user', blank=True)
     forum_time = models.DateTimeField(auto_now_add=True, name='time')

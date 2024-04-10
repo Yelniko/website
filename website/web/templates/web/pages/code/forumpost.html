@@ -5,6 +5,11 @@
 {% endblock %}
 
 {% block content %}
+    <form class="content task" method="post">
+        {% csrf_token %}
+        {{ forum.post }}
+        <button class="button p" type="submit">Save</button>
+    </form>
     {% if post %}
         {% for el in post %}
             <div class="content task">
@@ -16,7 +21,4 @@
             <a class="content_h1 task">There are no post at the moment</a>
         </div>
     {% endif %}
-    <form class="create top" method="post">
-
-    </form>
 {% endblock %}
