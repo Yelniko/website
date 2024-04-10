@@ -1,0 +1,28 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block content %}
+    <form class="create top" method="post">
+        <h1> Create </h1>
+
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.subject }}
+        {{ form.text }}
+        {{ form.description }}
+        {{ form.input }}
+        {{ form.output }}
+
+        {% if form.input %}
+            <link> Enter complexity
+        {% endif %}
+
+        {{ form.complexity }}
+
+        <button class="button p" type="submit">Save</button>
+    </form>
+
+{% endblock %}

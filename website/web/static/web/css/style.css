@@ -7,10 +7,9 @@
     text-decoration: none;
 }
 body{
-    height: 1000vh;
-    background: #fff;
+    background: #ecf0f3;
 }
-header{
+.tet{
     position: fixed;
     top: 0;
     left: 0;
@@ -21,75 +20,84 @@ header{
     align-items: center;
     padding: 0 8%;
     box-shadow: 0 5px 10px #BF7130;
+    margin: 0px 0px, 10px 0px;
 }
 
-header .logo{
+.logo{
     font-size: 20px;
     font-weight: 900;
     color: #fff;
 }
 
-header .logo:hover{
+.logo:hover{
     color: #00D1D1;
 }
 
-header nav ul li{
+.text {
     position: relative;
     float: left;
 }
 
-header .clause{
+.clause{
     padding: 15px;
     color: #fff;
     font-size: 16px;
     display: block;
 }
 
-header .clause:hover{
+.clause:hover{
     color: #00D1D1;
 }
 
-nav ul li ul{
+.lis {
     position: absolute;
     color: #00D1D1;
-    width: 135px;
+    width: auto;
     background: #000;
     display: none;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px ;
     border-width: 3;
     border-color: #fff;
-    border: 2px solid #BF7130;
+    border: 2px solid #00D1D1;
+
 }
 
-nav ul li ul li{
+.lis-text {
     width: 100%;
     display: block;
     text-align: center;
+    margin: 2px;
+    padding: 5px;
 }
 
-nav ul li ul li:hover{
+.lis-text:hover{
     color: #FF7400;
 }
 
-nav ul li:hover > ul {
+.text:hover > ul {
     display: initial;
 }
 
 .button {
+    display: inline-block;
     border-radius: 8px;
     font-size: 13px;
     color:#fff;
     padding: 5px 14px;
     background-color: #000;
     border: 2px solid #fff;
+    text-decoration: none
 }
 
-.button_1 {
+.button1 {
+    display: inline-block;
     border-radius: 8px;
     font-size: 13px;
+    color: #000;
     padding: 5px 14px;
-    background-color: #00CED1;
-    border: 2px solid #00CED1;
+    background-color: #FF7400;
+    border: 2px solid #FF7400;
+    text-decoration: none
 }
 
 .button:hover{
@@ -97,12 +105,160 @@ nav ul li:hover > ul {
     color: #000;
 }
 
-.button_1:hover{
-    background-color: #FF7400;
-    border: 2px solid #FF7400;
+.button1:hover{
+    background-color: #00CED1;
+    border: 2px solid #00CED1;
 }
 
+.content{
+    width: 600px;
+    margin: auto ;
+    margin-bottom: 20px;
+    border: 2px solid #FF7400;
+    background-color: #FF7400;
+    border-radius: 10px;
 
+}
+
+.top{
+    margin-bottom: 50px;
+}
+
+.create {
+    width: 600px;
+    margin: auto ;
+    margin-bottom: 20px;
+    border: 2px solid #FF7400;
+    background-color: #FF7400;
+    border-radius: 10px;
+    display: block;
+}
+
+.content:hover{
+    background-color: #00D1D1;
+    border-color: #00D1D1;
+}
+
+.content_h1{
+    word-wrap: break-word;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+.task {
+    border-bottom: none;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 1.5rem;
+
+}
+
+.content p{
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.content a{
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.exit {
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #000;
+    padding: 5px 14px;
+    background-color: #FF7400;
+    border: 2px solid #FF7400;
+    text-decoration: none
+}
+
+.exit::before {
+    content: attr(text);
+}
+
+.exit:hover::before {
+    content: "EXIT";
+}
+
+.exit:hover{
+    background-color: #00CED1;
+    border: 2px solid #00CED1;
+}
+
+.input {
+    margin: 10px;
+    margin-bottom: 20px;
+    width: calc(95%);
+    border: none;
+    border-bottom: 2px solid #000;
+    background-color: #FF7400;
+    outline: none;
+}
+
+.input1 {
+    border: 1px solid #000;
+}
+
+.color_text {
+    color: #FF7400;
+}
+
+.color_text:hover {
+    color: #00CED1;
+}
+
+.p {
+    margin-left: 330px;
+
+}
+
+.l {
+    margin-top: 20px;
+}
+
+.add {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    background-color: #FF7400;
+    border-radius: 180px;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.enter {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    width: 600px;
+    background-color: #FF7400;
+    border-radius: 10px;
+    left: 26.5%;
+}
+
+.enter_add {
+    field-sizing: content;
+}
+
+.add a {
+    vertical-align: 5px;
+}
+
+.news {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+.news a {
+    color: #000;
+}
 
 
 

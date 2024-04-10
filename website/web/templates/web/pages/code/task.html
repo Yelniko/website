@@ -1,0 +1,19 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    {% if task %}
+        {% for el in task %}
+            <div class="content task">
+                <a class="content_h1 task" href="/task/{{ el.id }}">{{ el.name }}</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="content task">
+            <a class="content_h1 task">There are no tasks at the moment</a>
+        </div>
+    {% endif %}
+{% endblock %}

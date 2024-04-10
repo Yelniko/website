@@ -1,0 +1,13 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    New
+{% endblock %}
+
+{% block content %}
+    <div class="content task">
+        <h1 class="content_h1">{{ new.name }}</h1>
+        <p>{{ new.text }}</p>
+        <a>{{ new.time }}</a>
+    </div>
+{% endblock %}

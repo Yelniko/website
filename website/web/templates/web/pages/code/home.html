@@ -1,0 +1,26 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    {% if new %}
+        {% for le in new %}
+            <div class="content top">
+                <h1 class="content_h1">{{ le.name }}</h1>
+                <div  class="news" href="/new/{{ le.id }}/">
+                    <a href="new/{{ le.id }}">{{ le.text }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="content top">
+            <h1 class="content_h1">Hello</h1>
+            <p>Hello my website</p>
+        </div>
+    {% endif %}
+    <div class="add">
+        <a href="{% url 'create_news' %}">+</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+    Description
+{% endblock %}
+
+{% block content %}
+    <div class="content task">
+        <h1 class="content_h1">{{ task.name }}</h1>
+        <p>Description: {{ task.description }}</p>
+    </div>
+    <div class="content task">
+        <h1 class="content_h1">Input</h1>
+        <p>{{ task.input }}</p>
+    </div>
+    <div class="content task">
+        <h1 class="content_h1">Output</h1>
+        <p>{{ task.output }}</p>
+    </div>
+
+{% endblock %}
